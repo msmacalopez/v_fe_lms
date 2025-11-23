@@ -1,16 +1,67 @@
-# React + Vite
+# Front-End LMS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Dependencies:
+npm install react-redux @reduxjs/toolkit react-router-dom axios react-bootstrap bootstrap react-toastify react-icons
 
-Currently, two official plugins are available:
+Configurations:
+[x] react router dom: main.jsx <BrowserRouter></BrowserRouter>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# react-router-dom
 
-## React Compiler
+import { BrowserRouter } from "react-router-dom";
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# _ wrap with react-router-dom _
 
-## Expanding the ESLint configuration
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+[x] import css of bootstrap: main.jsx
+
+# bootstrap css
+
+import "bootstrap/dist/css/bootstrap.min.css";
+
+[x] import css of react-toastify: App.jsx <ToastContainer />
+
+# react-toastify
+
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer, toast, Bounce } from "react-toastify";
+
+# in component:
+
+function App() {
+
+useEffect(() => {
+toast.success("Welcome to LMS");
+}, []);
+
+return (
+<>
+<ToastContainer
+        position="bottom-left"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        transition={Bounce}
+      />
+</>
+);
+}
+
+[x] react icons:
+
+# in app.jsx or any component
+
+import { FaRegThumbsUp } from "react-icons/fa";
+
+# then use the item:
+
+<FaRegThumbsUp />
