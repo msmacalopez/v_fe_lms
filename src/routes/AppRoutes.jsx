@@ -13,6 +13,7 @@ import {
   ForgetPasswordPage,
 } from "../pages/index.js";
 import DefaultOutletLayout from "../components/layouts/DefaultLayout.jsx";
+import { UserLayout } from "../components/layouts/UserLayout.jsx";
 
 export default function AppRoutes() {
   return (
@@ -26,7 +27,10 @@ export default function AppRoutes() {
       </Route>
 
       {/* private pages  */}
-      <Route path="/user" element={<DashboardPage />} />
+      {/* ROOT route will be always /user/... */}
+      <Route path="/user" element={<UserLayout />}>
+        <Route index element={<DashboardPage />} />
+      </Route>
     </Routes>
   );
 }

@@ -1,0 +1,39 @@
+import React from "react";
+import Header from "./Header";
+import Footer from "./Footer";
+import { Outlet } from "react-router-dom";
+import { Container, Row, Col } from "react-bootstrap";
+import Sidebar from "./SideBar";
+
+// Not default export
+export function UserLayout() {
+  return (
+    <div>
+      {/* navbar */}
+      <Header />
+
+      {/* main body*/}
+      {/* This part modifies */}
+      <Container fluid>
+        <Row>
+          <Col md={3} xl={2} className="bg-dark text-white">
+            <div className="p-3">
+              <div>Welcome Back,</div>
+              <h4>Maca</h4>
+            </div>
+            <hr />
+            <Sidebar />
+          </Col>
+          <Col md={9} xl={10}>
+            <main className="main">
+              <Outlet />
+            </main>
+          </Col>
+        </Row>
+      </Container>
+
+      {/* footer */}
+      <Footer />
+    </div>
+  );
+}

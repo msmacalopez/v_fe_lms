@@ -12,7 +12,7 @@ import { MdOutlineAccountCircle } from "react-icons/md";
 export default function Header() {
   return (
     <Navbar expand="md" className="bg-dark" variant="dark">
-      <Container fluid>
+      <Container>
         <Link to="/" className="logo-link">
           <img src={logo} width="80px" alt="logoLMS" />
           <span className="logo-text ms-2">
