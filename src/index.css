@@ -1,0 +1,9 @@
+.main {
+  min-height: 78.5vh;
+}
+.logo-text,
+.logo-link {
+  text-decoration: none;
+  color: white;
+  font-size: larger;
+}

@@ -6,16 +6,18 @@ import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast, Bounce } from "react-toastify";
 //imported icon: react-icons
 import { FaRegThumbsUp } from "react-icons/fa";
+import AppRoutes from "./routes/AppRoutes.jsx";
 
 function App() {
   useEffect(() => {
-    toast.success("Welcome to LMS");
+    toast.success("Welcome to our Library Management System");
   }, []);
 
   return (
     <>
-      <h1>LMS</h1>
-      <FaRegThumbsUp />
+      {/* <FaRegThumbsUp /> */}
+
+      <AppRoutes />
       <ToastContainer
         position="bottom-left"
         autoClose={5000}
