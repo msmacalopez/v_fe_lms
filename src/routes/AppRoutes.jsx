@@ -11,6 +11,11 @@ import {
   SignUpPage,
   SignInPage,
   ForgetPasswordPage,
+  Books,
+  UserPage,
+  EditBookPage,
+  ReviewsPage,
+  BorrowPage,
 } from "../pages/index.js";
 import DefaultOutletLayout from "../components/layouts/DefaultLayout.jsx";
 import { UserLayout } from "../components/layouts/UserLayout.jsx";
@@ -30,6 +35,14 @@ export default function AppRoutes() {
       {/* ROOT route will be always /user/... */}
       <Route path="/user" element={<UserLayout />}>
         <Route index element={<DashboardPage />} />
+        <Route path="books" element={<Books />} />
+        <Route path="borrow-history" element={<BorrowPage />} />
+        <Route path="profile" element={<UserPage />} />
+
+        <Route path="user-list" element={<UserPage />} />
+        <Route path="manage-books" element={<EditBookPage />} />
+        <Route path="manage-borrows" element={<Books />} />
+        <Route path="manage-reviews" element={<ReviewsPage />} />
       </Route>
     </Routes>
   );

@@ -7,6 +7,7 @@ export { default as VerifyUser } from "./auth/VerifyUser.jsx";
 export { default as BooklandingPage } from "./books/BookLandingPage.jsx";
 export { default as EditBookPage } from "./books/EditBookPage.jsx";
 export { default as NewBookPage } from "./books/NewBookPage.jsx";
+export { default as Books } from "./books/Books.jsx";
 //dashboard pages
 export { default as DashboardPage } from "./dashboard/DashboardPage.jsx";
 //Home pages
@@ -15,3 +16,5 @@ export { default as HomePage } from "./home/HomePage.jsx";
 export { default as ReviewsPage } from "./reviews/ReviewsPage.jsx";
 //user pages
 export { default as UserPage } from "./user/UserPage.jsx";
+//borrows pages
+export { default as BorrowPage } from "./borrows/BorrowPage.jsx";
