@@ -38,7 +38,7 @@ export default function AppRoutes() {
         <Route path="books" element={<Books />} />
         <Route path="borrow-history" element={<BorrowPage />} />
         <Route path="profile" element={<UserPage />} />
-
+        {/* Admin capabilities */}
         <Route path="user-list" element={<UserPage />} />
         <Route path="manage-books" element={<EditBookPage />} />
         <Route path="manage-borrows" element={<Books />} />
